@@ -1,12 +1,14 @@
-# BANANO Tip Bot
+# Universal Faucet Bot
 
-BANANO Tip Bot is an open source, free to use nano tip bot for discord.
+Dircird Faucet Bot is an open source, free to use faucet bot for discord.
 
-Intended to operate in a similar manner to the old tip bot on nano's discord server, with some enhancements.
+Forked from a nano tip bot based tip bot and intended to use as an add on to tip bots based on a similar source.
+
+This faucet bot is still a very early version and there are a lot of enhancements to come.
 
 ## Usage
 
-To run the bot, update `settings.py` with nano wallet ID and discord bot ID+Token, then simply use:
+To run the bot, update `settings.py` and `faucet_settings.py` with wallet ID and discord bot ID+Token and other parameters, then simply use:
 
 ```
 python3 bot.py
@@ -21,7 +23,7 @@ nohup python3 bot.py &
 ## Dependencies (install using pip)
 
 - Python 3.5+
-- BANANO Node v10+
+- Wallet Node v10+
 - `setuptools`
 - `discord`
 - `peewee`
@@ -30,5 +32,5 @@ nohup python3 bot.py &
 
 ## Disclaimer
 
-Banano TipBot for Reddit.
-TipBot is still in beta testing and should be used for fun, at your own risk. Bugs may arise and we will fix them asap but we cannot refund any losses or invalid TX's. TipBot NEVER loses funds, funds are always returned to the sending accounts.
+FaucetBot for Discord.
+FaucetBot is still in beta testing and should be used for fun, at your own risk. Bugs may arise and we will fix them asap but we cannot refund any losses or invalid TX's. 
