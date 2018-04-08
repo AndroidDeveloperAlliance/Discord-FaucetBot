@@ -233,7 +233,7 @@ async def on_message(message):
 		paused = True
 	elif cmd == 'unpause' and has_admin_role(message.author.roles):
 		paused = False
-	elif cmd == 'deposit' or cmd == 'register':
+	elif cmd == 'deposit' or cmd == 'donate':
 		await deposit(message)
 	elif paused:
 		await post_dm(message.author, PAUSE_MSG)
