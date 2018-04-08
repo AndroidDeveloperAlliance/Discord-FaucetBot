@@ -1,6 +1,6 @@
 # Universal Faucet Bot
 
-Dircird Faucet Bot is an open source, free to use faucet bot for discord.
+Dircord Faucet Bot is an open source, free to use faucet bot for discord.
 
 Forked from a nano tip bot based tip bot and intended to use as an add on to tip bots based on a similar source.
 
