@@ -1,6 +1,5 @@
 import datetime
 import util
-import faucet_settings
 from peewee import *
 from playhouse.sqliteq import SqliteQueueDatabase
 
