@@ -267,14 +267,20 @@ async def dailies(message):
 	if message.channel.is_private:
 		try:
 			## check for join date
-			if (datetime.datetime.now() - message.author.created_at) < faucet_settings.min_account_age:
-				raise util.TipBotException("not_eligible")
+			if int(datetime.datetime.now() - message.author.created_at).total_seconds() < faucet_settings.min_account_age:
+				# raise util.TipBotException("not_eligible")
+				await post_response(message, NOT_ELIGIBLE);
+				return
 			# check time since last faucet request, daily_wait set in faucet_settings.py
-			if (datetime.datetime.now() - faucet_db.get_last_request(message.author)) < faucet_settings.daily_wait:
-				raise util.TipBotException("not_eligible")
+			if int(datetime.datetime.now() - faucet_db.get_last_request(message.author)).total_seconds() < faucet_settings.daily_wait:
+				# raise util.TipBotException("not_eligible")
+				await post_response(message, NOT_ELIGIBLE);
+				return
 			# throw if first of last 4 faucet request timestamps within last 24 hours, daily_max set in faucet_settings.py
-			if (datetime.datetime.now() - faucet_db.get_first_request(message.author)) < 60*60*24:
-				raise util.TipBotException("not_eligible")
+			if int(datetime.datetime.now() - faucet_db.get_first_request(message.author)).total_seconds < 60*60*24:
+				# raise util.TipBotException("not_eligible")
+				await post_response(message, NOT_ELIGIBLE);
+				return
 
 			# add new request
 			faucet_db.add_new_request(message.author);
