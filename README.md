@@ -11,13 +11,13 @@ This faucet bot is still a very early version and there are a lot of enhancement
 To run the bot, update `settings.py` and `faucet_settings.py` with wallet ID and discord bot ID+Token and other parameters, then simply use:
 
 ```
-python3 bot.py
+python3 faucet_bot.py
 ```
 
 or to run in background
 
 ```
-nohup python3 bot.py &
+nohup python3 faucet_bot.py &
 ```
 
 ## Dependencies (install using pip)
